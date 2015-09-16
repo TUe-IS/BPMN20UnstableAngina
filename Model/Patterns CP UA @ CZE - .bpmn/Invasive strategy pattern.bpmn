@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:signavio="http://www.signavio.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="Signavio Process Editor, http://www.signavio.com" exporterVersion="7.4.0" expressionLanguage="http://www.w3.org/1999/XPath" id="sid-786c8c8b-af94-4760-a14b-565e170e2fad" targetNamespace="http://www.signavio.com/bpmn20" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd">
+   <collaboration id="sid-e5f82261-646c-4f35-8e69-bae5dd098545">
+      <participant id="sid-F53B887C-DECA-4685-9D99-C920550CE45F" name="Cardiologie" processRef="sid-607A88EA-A419-4806-B18A-3896EDE9A4F3">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+         </extensionElements>
+      </participant>
+   </collaboration>
+   <process id="sid-607A88EA-A419-4806-B18A-3896EDE9A4F3" isClosed="false" isExecutable="false" name="Cardiologie" processType="None">
+      <extensionElements/>
+      <laneSet id="sid-95382ab7-4d24-489a-a1de-e4c61a1fd5d8">
+         <lane id="sid-839B73AB-FCF0-4B0C-88B2-E32644F2B7F3" name="HCK">
+            <extensionElements>
+               <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
+            </extensionElements>
+            <flowNodeRef>sid-C3908AC9-21FB-4F64-A261-1373F639CEFE</flowNodeRef>
+            <flowNodeRef>sid-59343F2F-5AAA-418B-B821-376AE504F992</flowNodeRef>
+            <flowNodeRef>sid-BE330929-63E4-4747-8087-2144CF0042A0</flowNodeRef>
+         </lane>
+         <lane id="sid-6BA6E1E1-BFFA-4280-8208-080B00FA3B8F" name="Cardiologist">
+            <extensionElements>
+               <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
+            </extensionElements>
+            <flowNodeRef>sid-AC58259E-0B3A-4FBC-B28F-21DA60059E23</flowNodeRef>
+            <flowNodeRef>sid-4396EB2E-CCCC-4622-B461-6FD5E217AA23</flowNodeRef>
+         </lane>
+      </laneSet>
+      <endEvent id="sid-C3908AC9-21FB-4F64-A261-1373F639CEFE" name="end of&#10;Invasive&#10;Strategy">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+         </extensionElements>
+         <incoming>sid-2528E247-EAAC-418D-A8DC-5DC8319AC091</incoming>
+      </endEvent>
+      <task completionQuantity="1" id="sid-59343F2F-5AAA-418B-B821-376AE504F992" isForCompensation="false" name="execute CAG" startQuantity="1">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+            <signavio:signavioMetaData metaKey="risklevel" metaValue=""/>
+            <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]"/>
+         </extensionElements>
+         <incoming>sid-6E4352E2-8B23-4A12-91CC-B5B1D72B2A7C</incoming>
+         <outgoing>sid-2528E247-EAAC-418D-A8DC-5DC8319AC091</outgoing>
+      </task>
+      <task completionQuantity="1" id="sid-BE330929-63E4-4747-8087-2144CF0042A0" isForCompensation="false" name="Give UFH - 5000units" startQuantity="1">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+            <signavio:signavioMetaData metaKey="risklevel" metaValue=""/>
+            <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]"/>
+         </extensionElements>
+         <incoming>sid-1614A77E-39B6-4067-AC69-7C4329B58878</incoming>
+         <outgoing>sid-6E4352E2-8B23-4A12-91CC-B5B1D72B2A7C</outgoing>
+      </task>
+      <startEvent id="sid-AC58259E-0B3A-4FBC-B28F-21DA60059E23" name="start of&#10; Invasive&#10; strategy">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+         </extensionElements>
+         <outgoing>sid-0DFDC63A-7DB8-4074-BD44-3C1C87450188</outgoing>
+      </startEvent>
+      <task completionQuantity="1" id="sid-4396EB2E-CCCC-4622-B461-6FD5E217AA23" isForCompensation="false" name="Sign patient up for CAG" startQuantity="1">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+            <signavio:signavioMetaData metaKey="risklevel" metaValue=""/>
+            <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]"/>
+         </extensionElements>
+         <incoming>sid-0DFDC63A-7DB8-4074-BD44-3C1C87450188</incoming>
+         <outgoing>sid-1614A77E-39B6-4067-AC69-7C4329B58878</outgoing>
+      </task>
+      <sequenceFlow id="sid-0DFDC63A-7DB8-4074-BD44-3C1C87450188" name="" sourceRef="sid-AC58259E-0B3A-4FBC-B28F-21DA60059E23" targetRef="sid-4396EB2E-CCCC-4622-B461-6FD5E217AA23"/>
+      <sequenceFlow id="sid-1614A77E-39B6-4067-AC69-7C4329B58878" name="" sourceRef="sid-4396EB2E-CCCC-4622-B461-6FD5E217AA23" targetRef="sid-BE330929-63E4-4747-8087-2144CF0042A0"/>
+      <sequenceFlow id="sid-6E4352E2-8B23-4A12-91CC-B5B1D72B2A7C" name="" sourceRef="sid-BE330929-63E4-4747-8087-2144CF0042A0" targetRef="sid-59343F2F-5AAA-418B-B821-376AE504F992"/>
+      <sequenceFlow id="sid-2528E247-EAAC-418D-A8DC-5DC8319AC091" name="" sourceRef="sid-59343F2F-5AAA-418B-B821-376AE504F992" targetRef="sid-C3908AC9-21FB-4F64-A261-1373F639CEFE"/>
+   </process>
+   <bpmndi:BPMNDiagram id="sid-2ea2d24c-ed3c-4940-bb04-263e228a8232">
+      <bpmndi:BPMNPlane bpmnElement="sid-e5f82261-646c-4f35-8e69-bae5dd098545" id="sid-70b21d78-ec82-403e-bf8b-d09b5765f1bb">
+         <bpmndi:BPMNShape bpmnElement="sid-F53B887C-DECA-4685-9D99-C920550CE45F" id="sid-F53B887C-DECA-4685-9D99-C920550CE45F_gui" isHorizontal="true">
+            <omgdc:Bounds height="259.24288880855016" width="687.6002757484464" x="13.030096934525595" y="20.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-839B73AB-FCF0-4B0C-88B2-E32644F2B7F3" id="sid-839B73AB-FCF0-4B0C-88B2-E32644F2B7F3_gui" isHorizontal="true">
+            <omgdc:Bounds height="140.93294084384604" width="657.6002757484464" x="43.030096934525595" y="20.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-6BA6E1E1-BFFA-4280-8208-080B00FA3B8F" id="sid-6BA6E1E1-BFFA-4280-8208-080B00FA3B8F_gui" isHorizontal="true">
+            <omgdc:Bounds height="118.30994796470412" width="657.6002757484464" x="43.030096934525595" y="160.93294084384604"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-C3908AC9-21FB-4F64-A261-1373F639CEFE" id="sid-C3908AC9-21FB-4F64-A261-1373F639CEFE_gui">
+            <omgdc:Bounds height="28.0" width="28.0" x="637.7619634265056" y="71.98463738623789"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-59343F2F-5AAA-418B-B821-376AE504F992" id="sid-59343F2F-5AAA-418B-B821-376AE504F992_gui">
+            <omgdc:Bounds height="80.0" width="99.99999999999994" x="483.84604091010203" y="45.98463738623789"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-BE330929-63E4-4747-8087-2144CF0042A0" id="sid-BE330929-63E4-4747-8087-2144CF0042A0_gui">
+            <omgdc:Bounds height="80.00000000000003" width="100.0" x="338.846040910102" y="45.98463738623789"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-AC58259E-0B3A-4FBC-B28F-21DA60059E23" id="sid-AC58259E-0B3A-4FBC-B28F-21DA60059E23_gui">
+            <omgdc:Bounds height="30.0" width="30.0" x="126.01390599939748" y="200.4637575797634"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-4396EB2E-CCCC-4622-B461-6FD5E217AA23" id="sid-4396EB2E-CCCC-4622-B461-6FD5E217AA23_gui">
+            <omgdc:Bounds height="80.0" width="100.0" x="193.84604091010198" y="175.4637575797634"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNEdge bpmnElement="sid-2528E247-EAAC-418D-A8DC-5DC8319AC091" id="sid-2528E247-EAAC-418D-A8DC-5DC8319AC091_gui">
+            <omgdi:waypoint x="583.8460409101019" y="85.98463738623789"/>
+            <omgdi:waypoint x="637.7619634265056" y="85.98463738623789"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="sid-0DFDC63A-7DB8-4074-BD44-3C1C87450188" id="sid-0DFDC63A-7DB8-4074-BD44-3C1C87450188_gui">
+            <omgdi:waypoint x="156.01390599939748" y="215.6531290297201"/>
+            <omgdi:waypoint x="193.84604091010198" y="215.54739647804377"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="sid-1614A77E-39B6-4067-AC69-7C4329B58878" id="sid-1614A77E-39B6-4067-AC69-7C4329B58878_gui">
+            <omgdi:waypoint x="293.846040910102" y="215.46375757976344"/>
+            <omgdi:waypoint x="316.346040910102" y="215.46375757976344"/>
+            <omgdi:waypoint x="316.346040910102" y="85.9846373862379"/>
+            <omgdi:waypoint x="338.846040910102" y="85.9846373862379"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="sid-6E4352E2-8B23-4A12-91CC-B5B1D72B2A7C" id="sid-6E4352E2-8B23-4A12-91CC-B5B1D72B2A7C_gui">
+            <omgdi:waypoint x="438.846040910102" y="85.9846373862379"/>
+            <omgdi:waypoint x="483.84604091010203" y="85.9846373862379"/>
+         </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+   </bpmndi:BPMNDiagram>
+</definitions>
